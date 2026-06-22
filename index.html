@@ -1,10 +1,421 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=GrahamEllinsonCV.pdf" />
-    <link rel="canonical" href="GrahamEllinsonCV.pdf" />
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="GrahamEllinsonCV.pdf">click here to view my CV</a>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graham Ellinson — Data Scientist · Trading, AI & DeFi</title>
+  <meta name="description" content="Graham Ellinson — Data Scientist at eToro. I build advanced ML (deep RL, neural nets, LSTM) and production AI agents on a foundation of trading, hedging and execution — and DeFi/on-chain systems — then drive adoption across trading teams." />
+  <meta name="author" content="Graham Ellinson" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Graham Ellinson — Trading, AI & DeFi" />
+  <meta property="og:description" content="Advanced ML + production AI agents, deep trading/hedging/execution expertise, and DeFi engineering — built and adopted." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23080b12'/><text x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%232ee6c5' text-anchor='middle'>g</text></svg>" />
+</head>
+<body>
+  <div class="bg-field"></div>
+  <div class="bg-grid"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo"><span class="dot"></span>graham<span class="muted">.ellinson</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#arc">Arc</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#work">Work</a>
+        <a href="#adoption">AI Adoption</a>
+        <a href="#skills">Stack</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="cv.html" target="_blank" rel="noopener">CV</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="eyebrow reveal">// data scientist · trading × ai × defi · tel aviv</div>
+      <h1 class="reveal d1">I build AI that moves real money<span class="line2 grad-text">— and teach teams to trust it.</span></h1>
+      <p class="hero-sub reveal d2">
+        Data Scientist at <strong>eToro</strong>. I build production AI across the stack —
+        <strong>deep reinforcement learning, neural networks and LSTM models</strong>, LLM agents,
+        and <strong>on-chain DeFi systems</strong> — on a foundation of real trading, hedging and
+        execution expertise. Then I sit with the desk and <strong>get them to adopt it</strong>.
+      </p>
+
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" href="#work">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          View work
+        </a>
+        <a class="btn btn-ghost" href="assets/cv/Graham-Ellinson-CV.pdf" download>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          Download CV
+        </a>
+        <a class="btn btn-ghost" href="cv.html" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          View CV
+        </a>
+      </div>
+
+      <div class="terminal reveal d3">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>~/graham — focus_2026</span></div>
+        <div class="terminal-body">
+          <div><span class="comment"># what I'm doing right now</span></div>
+          <div><span class="prompt">graham@trading</span>:<span style="color:var(--accent-2)">~</span>$ <span class="typed" id="typed"></span><span class="cursor-blink" aria-hidden="true"></span></div>
+        </div>
+      </div>
+
+      <div class="ticker reveal d4">
+        <span class="chip"><b>●</b> deep RL · ANN/CNN · LSTM · GARCH</span>
+        <span class="chip"><span class="up">▲</span> multi-billion-$ recon, automated</span>
+        <span class="chip"><b>●</b> DeFi: mint/burn · smart contracts · MEV-safe</span>
+        <span class="chip"><b>●</b> 21-course trading academy, shipped</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== ARC ===================== -->
+  <section id="arc">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">// the arc</div>
+        <h2 class="title">Three phases. One compounding story.</h2>
+        <p>I didn't jump to AI. I built the quant and ML foundations, learned the revenue side, and now ship AI and DeFi on top of both — which is exactly what makes the work credible.</p>
+      </div>
+
+      <div class="arc-grid">
+        <div class="phase reveal">
+          <div class="bar"><i style="width:100%"></i></div>
+          <div class="ph-no">PHASE 01</div>
+          <h3>Hedging, Execution &amp; ML</h3>
+          <p>Built hedging algorithms with Random Forest and LSTM models, ran execution research, and modelled volatility and regime change with GARCH on full L2 order-book data.</p>
+        </div>
+        <div class="phase reveal d1">
+          <div class="bar"><i style="width:100%"></i></div>
+          <div class="ph-no">PHASE 02</div>
+          <h3>Revenue &amp; Client Engagement</h3>
+          <p>Shipped an A/B-tested neural-network churn model and deep-RL portfolio construction, plus revenue and client-engagement analytics that connect models to the P&amp;L.</p>
+        </div>
+        <div class="phase current reveal d2">
+          <span class="tag">current</span>
+          <div class="bar"><i style="width:100%"></i></div>
+          <div class="ph-no">PHASE 03</div>
+          <h3>AI Agents, DeFi &amp; Adoption</h3>
+          <p>Ship production AI agents and on-chain DeFi systems for trading — and embed with teams to get the whole desk adopting AI safely.</p>
+        </div>
+      </div>
+
+      <div class="arc-foot reveal d2">
+        <b>Operating altitude:</b> technical execution + leverage creation — building the system <em>and</em> getting people to use it.
+      </div>
+
+      <div class="creds reveal d2">
+        <span class="cred">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+          <b>MSc Artificial Intelligence</b> <span class="dist">Distinction</span> · University of Bath
+        </span>
+        <span class="cred">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+          <b>BSc Mathematics</b> <span class="dist">First Class Honours</span> · Northumbria University
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CAPABILITIES ===================== -->
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">// what I do</div>
+        <h2 class="title">Three deep domains, one rare combination.</h2>
+        <p>Advanced ML. Real trading and hedging. Modern DeFi. Most people have one — the value is in holding all three, and in getting teams to actually adopt what I build.</p>
+      </div>
+
+      <div class="cap-grid">
+        <article class="cap reveal tilt">
+          <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="13" r="2"/><circle cx="19" cy="13" r="2"/><circle cx="9" cy="20" r="1.6"/><circle cx="15" cy="20" r="1.6"/><path d="M10.5 6.3L6.4 11.4M13.5 6.3l4.1 5.1M6.2 14.6l2.2 4M17.8 14.6l-2.2 4"/></svg></div>
+          <h3>Machine Learning &amp; AI</h3>
+          <p>Deep reinforcement learning, neural networks (ANN/CNN), LSTM/RNN and ensemble models — plus production LLM agents. From portfolio RL and volatility models to agents that reason over live trading data.</p>
+        </article>
+
+        <article class="cap reveal d1 tilt">
+          <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l3-5 3 3 4-7"/></svg></div>
+          <h3>Trading, Hedging &amp; Execution</h3>
+          <p>Real quant-finance depth: hedging and execution algorithms, derivatives pricing, market microstructure, GARCH/regime models and multi-billion-dollar reconciliation. The domain knowledge that makes the AI trustworthy.</p>
+        </article>
+
+        <article class="cap reveal d2 tilt">
+          <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"/><path d="M12 2v18M4 6.5l8 4.5 8-4.5"/></svg></div>
+          <h3>DeFi &amp; On-Chain</h3>
+          <p>Tokenizing assets on-chain via mint and burn, writing Solidity smart contracts and on-chain liquidation bots, and engineering them to resist MEV and sandwich attacks across EVM and Solana. Modern crypto, built robustly.</p>
+        </article>
+
+        <article class="cap feature reveal d3 tilt">
+          <span class="pill">the <span class="js-year">2026</span> skill</span>
+          <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 14c4 0 7-2.2 7-5s-3-5-7-5-7 2.2-7 5c0 1.6 1 3 2.6 4"/><path d="M5 19c0-2.2 2.5-3.5 5-3.5"/><circle cx="16.5" cy="16.5" r="3.5"/><path d="M16.5 15v3M15 16.5h3"/></svg></div>
+          <h3>AI Adoption &amp; Enablement</h3>
+          <p>I embed with teams doing manual work, build the agent around their workflow, automate it — then teach them to run and extend it themselves. Build, hand over, multiply.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">// selected work</div>
+        <h2 class="title">Systems I've built and shipped.</h2>
+        <p>Production work across ML, AI agents, DeFi and a full learning platform. Internal systems are described at a deliberately high level — no confidential figures or names.</p>
+      </div>
+
+      <div class="explorer reveal">
+        <div class="exp-list" role="tablist" aria-label="Projects">
+          <div class="exp-head">// projects</div>
+          <button class="exp-tab active" role="tab" data-target="p-ml" aria-selected="true">
+            <span class="et-name"><span class="led"></span>trading-ml-models</span>
+            <span class="et-kind">deep RL · ANN · LSTM · GARCH</span>
+          </button>
+          <button class="exp-tab" role="tab" data-target="p-recon" aria-selected="false">
+            <span class="et-name"><span class="led"></span>recon-platform</span>
+            <span class="et-kind">AI reconciliation · adopted</span>
+          </button>
+          <button class="exp-tab" role="tab" data-target="p-hedge" aria-selected="false">
+            <span class="et-name"><span class="led"></span>hedge-cost-agent</span>
+            <span class="et-kind">reporting agent · adopted</span>
+          </button>
+          <button class="exp-tab" role="tab" data-target="p-defi" aria-selected="false">
+            <span class="et-name"><span class="led"></span>tokenisation-defi</span>
+            <span class="et-kind">tokenization · liquidation bots</span>
+          </button>
+          <button class="exp-tab" role="tab" data-target="p-academy" aria-selected="false">
+            <span class="et-name"><span class="led"></span>trading-academy</span>
+            <span class="et-kind">21-course platform · live</span>
+          </button>
+        </div>
+
+        <div class="exp-detail">
+          <!-- ML / Quant models -->
+          <div class="exp-panel active" id="p-ml" role="tabpanel">
+            <div class="ep-kind">Machine learning &amp; quant research · production</div>
+            <span class="dbadge">advanced ML · trading</span>
+            <h3 style="margin-top:12px">Models that trade, hedge and predict</h3>
+            <p class="ep-lead">A body of production machine-learning work applying deep learning, reinforcement learning and classical ML to real trading and client problems.</p>
+            <ul>
+              <li><b>Deep reinforcement learning</b> for portfolio construction — increasing revenue while cutting computational latency.</li>
+              <li><b>Hedging algorithms</b> built on Random Forest and LSTM/RNN models, reducing trading costs and improving risk management.</li>
+              <li><b>Neural-network churn model</b> identifying users at risk of cashing out, validated to statistical significance via A/B testing.</li>
+              <li><b>GARCH volatility &amp; regime models</b> plus liquidity analysis on full L2 limit-order-book data to inform trading decisions.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Deep RL</span><span class="tag">ANN / CNN</span><span class="tag">LSTM / RNN</span>
+              <span class="tag">Random Forest</span><span class="tag">GARCH</span><span class="tag">Python</span><span class="tag">PySpark</span>
+            </div>
+            <div class="ep-links"><span class="ep-link muted">● Production — eToro Trading</span></div>
+          </div>
+
+          <!-- Recon -->
+          <div class="exp-panel" id="p-recon" role="tabpanel">
+            <div class="ep-kind">AI reconciliation platform · built, automated &amp; handed over</div>
+            <span class="dbadge">AI agents · adoption</span>
+            <h3 style="margin-top:12px">Reconciliation that explains itself</h3>
+            <p class="ep-lead">An AI-powered platform that explains multi-billion-dollar daily position breaks across multiple liquidity providers in seconds — built with the team that used to do it by hand.</p>
+            <ul>
+              <li><b>Embedded with the operations team:</b> sat with the people doing the manual reconciliation, mapped their real workflow, and built the agent around how they actually work.</li>
+              <li><b>Structured investigation:</b> every break is classified through a fixed, auditable checklist with a documented root cause — so no two analysts give a different answer.</li>
+              <li><b>Automated the grind:</b> replaced hours of manual detective work with same-day, explainable answers across multiple providers.</li>
+              <li><b>Handed it over:</b> taught the team to use, trust and <b>extend the agent themselves</b> — they now maintain and update it without me in the loop.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">LLM agents</span><span class="tag">Python</span><span class="tag">Databricks</span>
+              <span class="tag">Azure</span><span class="tag">Delta / Unity Catalog</span><span class="tag">SQL</span>
+            </div>
+            <div class="ep-links"><span class="ep-link muted">● Internal — eToro Trading</span></div>
+          </div>
+
+          <!-- Hedge -->
+          <div class="exp-panel" id="p-hedge" role="tabpanel">
+            <div class="ep-kind">Hedge-cost reporting agent · built, automated &amp; handed over</div>
+            <span class="dbadge">AI agents · adoption</span>
+            <h3 style="margin-top:12px">Daily hedge cost, on tap</h3>
+            <p class="ep-lead">An automated agent that reconciles and reports hedging cost across every asset-class book each day, with anomaly detection and self-service dashboards — now run by the desk itself.</p>
+            <ul>
+              <li><b>Understood the manual process first:</b> worked alongside the desk doing the slow, error-prone monthly reconciliation before automating a single step.</li>
+              <li><b>Full coverage:</b> server-side pipelines compute per-instrument hedge cost across equities, commodities, indices, FX and crypto books daily.</li>
+              <li><b>Signal over noise:</b> a rule-based anomaly engine separates genuine cost spikes from data artifacts, with failsafe auto-rollback safeguards.</li>
+              <li><b>Enabled the team:</b> showed them how to query, validate and update the agent with AI — so the desk now owns and evolves it.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Databricks SQL</span><span class="tag">Plotly</span>
+              <span class="tag">GitHub Actions</span><span class="tag">anomaly detection</span>
+            </div>
+            <div class="ep-links"><span class="ep-link muted">● Internal — eToro Trading</span></div>
+          </div>
+
+          <!-- DeFi -->
+          <div class="exp-panel" id="p-defi" role="tabpanel">
+            <div class="ep-kind">Tokenization &amp; DeFi infrastructure · on-chain</div>
+            <span class="dbadge">DeFi · smart contracts</span>
+            <h3 style="margin-top:12px">Tokenized assets, smart contracts &amp; liquidation bots</h3>
+            <p class="ep-lead">Hands-on DeFi engineering: tokenizing assets on-chain and building the smart-contract infrastructure around them — shipped and working.</p>
+            <ul>
+              <li><b>Asset tokenization:</b> mint and burn token wrappers for real assets on-chain across <b>EVM and Solana</b>.</li>
+              <li><b>Solidity smart contracts:</b> design and write production smart contracts, including on-chain <b>liquidation bots</b> that keep DeFi positions healthy.</li>
+              <li><b>MEV-resistant by design:</b> engineered to defend against MEV and sandwich attacks during execution.</li>
+              <li><b>End-to-end DeFi:</b> from contract to execution — demonstrating deep, practical understanding of modern crypto infrastructure.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Solidity</span><span class="tag">Smart contracts</span><span class="tag">Mint / Burn</span>
+              <span class="tag">Liquidation bots</span><span class="tag">EVM / Solana</span><span class="tag">MEV-resistant</span>
+            </div>
+            <div class="ep-links"><span class="ep-link muted">● Internal · DeFi R&amp;D</span></div>
+          </div>
+
+          <!-- Academy -->
+          <div class="exp-panel" id="p-academy" role="tabpanel">
+            <div class="ep-kind">eToro Trading Academy · live full-stack platform</div>
+            <span class="dbadge">full-stack · education</span>
+            <h3 style="margin-top:12px">A trading academy, beginner to quant</h3>
+            <p class="ep-lead">A complete learning platform that takes someone from their first order through to mathematically rigorous advanced material — 21 live courses across trading, derivatives, execution, microstructure, portfolio construction, crypto/DeFi and compliance.</p>
+            <ul>
+              <li><b>Breadth of content:</b> 21 courses spanning execution algorithms, advanced options &amp; derivatives, quantitative strategies, market microstructure, factor investing, crypto/DeFi (stablecoins, perps, yield) and compliance.</li>
+              <li><b>Real full-stack engineering:</b> a single FastAPI service serving a React/Tailwind portal <b>and</b> an embedded interactive Execution Lab, backed by Lakebase Postgres on Databricks Apps with Azure AD SSO and RBAC.</li>
+              <li><b>Built-in AI tutor</b> and a content schema that lets subject experts author courses without touching React — plus CI design-contract gates, accessibility (WCAG AA) and a full test pyramid.</li>
+              <li><b>Consolidated</b> my earlier options-pricing and execution-research tools into one cohesive, governed platform.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Tailwind</span>
+              <span class="tag">Databricks Apps</span><span class="tag">Lakebase / Postgres</span><span class="tag">Azure AD SSO</span><span class="tag">CI/CD</span>
+            </div>
+            <div class="ep-links"><span class="ep-link muted">● Internal platform — eToro</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AI ADOPTION ===================== -->
+  <section id="adoption">
+    <div class="wrap">
+      <div class="adopt reveal">
+        <div class="adopt-top">
+          <div>
+            <div class="eyebrow">// the differentiator</div>
+            <h2>Building AI is half the job.<br/><span class="grad-text">Adoption is the other half.</span></h2>
+            <p class="lead">
+              In <span class="js-year">2026</span>, the scarce skill isn't writing the agent — it's getting a non-technical desk to
+              <strong>trust it, use it, and own it</strong>. My agents don't sit on my laptop: I embed
+              with the team, build around their real workflow, automate the manual grind, and then
+              <strong>teach them to run and extend the tool themselves</strong> — so my work multiplies
+              instead of creating a dependency on me.
+            </p>
+          </div>
+          <div>
+            <div class="flow">
+              <div class="flow-step"><span class="fs-dot"></span><h4><span class="fs-no">01</span>Sit with the team</h4><p>Watch the manual work, learn the edge cases, map how they actually operate.</p></div>
+              <div class="flow-step"><span class="fs-dot"></span><h4><span class="fs-no">02</span>Build around it</h4><p>An agent that fits their workflow — explainable, with guardrails they can trust.</p></div>
+              <div class="flow-step"><span class="fs-dot"></span><h4><span class="fs-no">03</span>Automate the grind</h4><p>The slow, error-prone manual steps disappear; answers arrive in seconds.</p></div>
+              <div class="flow-step"><span class="fs-dot"></span><h4><span class="fs-no">04</span>Hand it over</h4><p>Teach them to use, validate and extend it with AI — they own and update it themselves.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modules">
+          <div class="module reveal"><div class="m-no">01</div><h4>Domain AI for ops users</h4><p>Teach the desk to ask reliable questions of internal AI agents — and understand the limits of each answer.</p></div>
+          <div class="module reveal d1"><div class="m-no">02</div><h4>GitHub for non-engineers</h4><p>Access docs, follow setup steps, and report issues — without needing to be a developer.</p></div>
+          <div class="module reveal d2"><div class="m-no">03</div><h4>Cursor &amp; Claude Code setup</h4><p>Practical, safe setup for power users to edit scripts and debug with AI in the loop.</p></div>
+          <div class="module reveal"><div class="m-no">04</div><h4>Databricks + AI analysis</h4><p>Query and summarize trading data responsibly, with the guardrails that keep it safe.</p></div>
+          <div class="module reveal d1"><div class="m-no">05</div><h4>Safe prompt &amp; review patterns</h4><p>How to avoid over-trusting AI — verification habits, and a clear "what not to do" for sensitive data.</p></div>
+          <div class="module reveal d2"><div class="m-no">06</div><h4>Office hours, not a one-off launch</h4><p>Ongoing, low-friction support that meets people in their real workflow — reducing fear, building momentum.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">// the stack</div>
+        <h2 class="title">Tools I reach for.</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="skillset reveal">
+          <h4>Machine Learning &amp; AI</h4>
+          <div class="stags"><span>Deep RL</span><span>Neural nets (ANN/CNN)</span><span>LSTM / RNN</span><span>Random Forest</span><span>GARCH</span><span>LLM agents</span><span>RAG</span><span>Prompt eng.</span></div>
+        </div>
+        <div class="skillset reveal d1">
+          <h4>Languages</h4>
+          <div class="stags"><span>Python</span><span>R</span><span>SQL</span><span>Solidity</span><span>TypeScript</span><span>Matlab</span><span>Mathematica</span></div>
+        </div>
+        <div class="skillset reveal d2">
+          <h4>Data &amp; Cloud</h4>
+          <div class="stags"><span>Databricks</span><span>Azure</span><span>PySpark / Spark SQL</span><span>Lakebase</span><span>Delta Lake</span><span>Tableau</span></div>
+        </div>
+        <div class="skillset reveal">
+          <h4>Quant &amp; Trading</h4>
+          <div class="stags"><span>Hedging</span><span>Execution algos</span><span>Derivatives pricing</span><span>Microstructure</span><span>L2 order book</span><span>Portfolio construction</span><span>Reconciliation</span></div>
+        </div>
+        <div class="skillset reveal d1">
+          <h4>DeFi &amp; Crypto</h4>
+          <div class="stags"><span>Tokenization</span><span>Smart contracts</span><span>Mint / Burn</span><span>Liquidation bots</span><span>MEV-resistant</span><span>EVM &amp; Solana</span></div>
+        </div>
+        <div class="skillset reveal d2">
+          <h4>Web &amp; Delivery</h4>
+          <div class="stags"><span>FastAPI</span><span>React</span><span>Next.js</span><span>Tailwind</span><span>Plotly</span><span>Docker</span><span>CI/CD</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div class="eyebrow" style="justify-content:center;display:flex">// let's talk</div>
+        <h2>Building AI into a finance team?<br/><span class="grad-text">That's exactly my lane.</span></h2>
+        <p>Advanced ML, production AI agents, DeFi engineering — or getting a team to actually adopt AI. Happy to compare notes.</p>
+        <div class="cta-btns">
+          <a class="btn btn-primary" href="assets/cv/Graham-Ellinson-CV.pdf" download>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            Download CV (PDF)
+          </a>
+          <a class="btn btn-ghost" href="mailto:ellinsong@gmail.com">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            Email me
+          </a>
+        </div>
+        <div class="contact-row">
+          <a href="mailto:ellinsong@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>ellinsong@gmail.com</a>
+          <a href="https://www.linkedin.com/in/graham-ellinson-4624b1171" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v14H.2V8zm7.5 0h4.4v1.9h.06c.61-1.16 2.1-2.4 4.32-2.4 4.62 0 5.47 3.04 5.47 7v7.5h-4.6v-6.65c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V22h-4.6V8z"/></svg>linkedin.com/in/graham-ellinson</a>
+          <a href="https://github.com/graham-blip" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.33 4.81-4.56 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>github.com/graham-blip</a>
+          <span style="color:var(--text-faint);display:inline-flex;align-items:center;gap:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tel Aviv, Israel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="f-mono">© <span id="year"></span> Graham Ellinson — <b>trading · ai · defi</b></div>
+      <div class="f-mono">built with <b>html · css · a little js</b> — no framework, ships static</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
