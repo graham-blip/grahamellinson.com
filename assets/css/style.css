@@ -590,11 +590,76 @@ h2.title {
   .modules { grid-template-columns: 1fr; }
   .skill-grid { grid-template-columns: 1fr; }
   .adopt-top { grid-template-columns: 1fr; gap: 26px; }
+
+  /* Work section: single column. JS upgrades this to an accordion (.is-accordion).
+     If JS is unavailable, fall back to a wrapping pill row of tabs + detail below. */
   .explorer { grid-template-columns: 1fr; }
-  .exp-list { border-right: none; border-bottom: 1px solid var(--border); display: flex; gap: 8px; overflow-x: auto; padding: 12px; }
+  .exp-list { border-right: none; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 8px; overflow: visible; padding: 12px; }
   .exp-list .exp-head { display: none; }
-  .exp-tab { min-width: 200px; }
+  .exp-tab { flex: 1 1 auto; min-width: 140px; }
 }
+
+/* ---------- Work explorer: mobile accordion (set by JS) ---------- */
+.explorer.is-accordion { display: block; }
+.explorer.is-accordion .exp-list {
+  display: block;
+  overflow: visible;
+  background: var(--bg-2);
+  border-right: none;
+  border-bottom: none;
+  padding: 8px;
+}
+.explorer.is-accordion .exp-list .exp-head { display: block; }
+.explorer.is-accordion .exp-detail { display: none; }
+.explorer.is-accordion .exp-tab {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  flex: none;
+  margin-bottom: 6px;
+  padding: 14px 42px 14px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.explorer.is-accordion .exp-tab.active {
+  border-color: rgba(46, 230, 197, 0.4);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.explorer.is-accordion .exp-tab::after {
+  content: "";
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -6px;
+  border-right: 2px solid var(--text-faint);
+  border-bottom: 2px solid var(--text-faint);
+  transform: rotate(45deg);
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+.explorer.is-accordion .exp-tab.active::after {
+  margin-top: -2px;
+  transform: rotate(-135deg);
+  border-color: var(--accent);
+}
+.explorer.is-accordion .exp-panel {
+  display: none;
+  min-height: 0;
+  margin: -6px 0 10px;
+  padding: 18px 16px 20px;
+  background: var(--panel-2);
+  border: 1px solid rgba(46, 230, 197, 0.4);
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: none;
+}
+.explorer.is-accordion .exp-panel.active { display: block; }
+.explorer.is-accordion .exp-panel h3 { font-size: 21px; }
+.explorer.is-accordion .exp-panel .ep-lead { font-size: 15.5px; }
 @media (max-width: 720px) {
   body { font-size: 16px; }
   section { padding: 76px 0; }

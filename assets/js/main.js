@@ -110,20 +110,74 @@
     }
   }
 
-  /* ---------- project explorer tabs ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll(".exp-tab"));
-  var panels = Array.prototype.slice.call(document.querySelectorAll(".exp-panel"));
-  function activate(target) {
+  /* ---------- project explorer: tabs on desktop, accordion on mobile ---------- */
+  var explorer = document.querySelector(".explorer");
+  if (explorer) {
+    var expList = explorer.querySelector(".exp-list");
+    var expDetail = explorer.querySelector(".exp-detail");
+    var tabs = Array.prototype.slice.call(explorer.querySelectorAll(".exp-tab"));
+    var getPanel = function (t) { return document.getElementById(t.dataset.target); };
+    var mq = window.matchMedia("(max-width: 920px)");
+    var accordion = false;
+
+    // Show exactly one panel (used for desktop tabs and accordion "open one")
+    function showOnly(target) {
+      tabs.forEach(function (t) {
+        var on = t.dataset.target === target;
+        t.classList.toggle("active", on);
+        t.setAttribute("aria-selected", String(on));
+        t.setAttribute("aria-expanded", String(on));
+        var p = getPanel(t);
+        if (p) p.classList.toggle("active", on);
+      });
+    }
+
+    function onTabClick(t) {
+      // In accordion mode, tapping the open project collapses it.
+      if (accordion && t.classList.contains("active")) {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+        t.setAttribute("aria-expanded", "false");
+        var p = getPanel(t);
+        if (p) p.classList.remove("active");
+        return;
+      }
+      showOnly(t.dataset.target);
+    }
+
     tabs.forEach(function (t) {
-      var on = t.dataset.target === target;
-      t.classList.toggle("active", on);
-      t.setAttribute("aria-selected", String(on));
+      t.addEventListener("click", function () { onTabClick(t); });
     });
-    panels.forEach(function (p) { p.classList.toggle("active", p.id === target); });
+
+    // Move each panel directly beneath its tab so it reads as an accordion.
+    function toAccordion() {
+      if (accordion) return;
+      tabs.forEach(function (t) {
+        var p = getPanel(t);
+        if (p) expList.insertBefore(p, t.nextSibling);
+      });
+      explorer.classList.add("is-accordion");
+      accordion = true;
+    }
+
+    // Restore panels into the detail pane for the desktop two-column layout.
+    function toTabs() {
+      if (!accordion) return;
+      tabs.forEach(function (t) {
+        var p = getPanel(t);
+        if (p) expDetail.appendChild(p);
+      });
+      explorer.classList.remove("is-accordion");
+      accordion = false;
+      var anyActive = tabs.some(function (t) { return t.classList.contains("active"); });
+      if (!anyActive && tabs[0]) showOnly(tabs[0].dataset.target);
+    }
+
+    function syncLayout(e) { if (e.matches) toAccordion(); else toTabs(); }
+    if (mq.addEventListener) mq.addEventListener("change", syncLayout);
+    else if (mq.addListener) mq.addListener(syncLayout);
+    syncLayout(mq);
   }
-  tabs.forEach(function (t) {
-    t.addEventListener("click", function () { activate(t.dataset.target); });
-  });
 
   /* ---------- capability card cursor glow ---------- */
   if (!reduceMotion) {
